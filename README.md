@@ -9,7 +9,7 @@
 
 ## Scenario
 
-Imagine you're a systems administrator responsible for keeping an organised and auditable record of departmental logs. Every day, new log files and report files accumulate in a shared Logs folder. It's your job to build a utility that automatically creates a full backup of that folder, appends a note to the backup report, moves all relevant report files into the backup directory, and then confirms the outcome by printing a summary of what was done — including who ran the script, when it ran, and from where.
+Imagine you're a systems administrator responsible for keeping an organised and auditable record of departmental logs. Every day, new log files and report files accumulate in a shared Logs folder. It's your job to build a utility that automatically creates a full backup of that folder, appends a note to the backup report, moves all relevant report files into the backup directory, and then confirms the outcome by printing a summary of what was done, including who ran the script, when it ran, and from where.
 
 ---
 
@@ -75,7 +75,7 @@ organise_sh_BackupUtility/
 
 ### 6. `whoami`
 **Definition:** Prints the username of the currently logged-in user.  
-**Why I used it:** Records which user account ran the script — useful for accountability and auditing in shared or multi-user environments.
+**Why I used it:** Records which user account ran the script; useful for accountability and auditing in shared or multi-user environments.
 
 ---
 
@@ -95,9 +95,9 @@ organise_sh_BackupUtility/
 
 | Flag | Command | Purpose |
 |---|---|---|
-| `-a` | `cp` | Archive mode — recursive copy preserving all file attributes |
-| `-v` | `cp` | Verbose — print each file as it is copied |
-| `-v` | `mv` | Verbose — print each file as it is moved |
+| `-a` | `cp` | Archive mode - recursive copy preserving all file attributes |
+| `-v` | `cp` | Verbose - print each file as it is copied |
+| `-v` | `mv` | Verbose - print each file as it is moved |
 | `>>` | `echo` | Append output to a file without overwriting |
 
 ---
@@ -106,7 +106,7 @@ organise_sh_BackupUtility/
 
 | Pattern | Context | Purpose |
 |---|---|---|
-| `rep*.txt` | `mv` source | Matches any `.txt` file whose name begins with `rep` — selects all report files in one step without naming them individually |
+| `rep*.txt` | `mv` source | Matches any `.txt` file whose name begins with `rep` - selects all report files in one step without naming them individually |
 
 ---
 
